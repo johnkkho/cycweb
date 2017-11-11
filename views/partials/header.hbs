@@ -1,0 +1,158 @@
+<header>
+    <section class="header-top">
+        <div class="container">
+            <div class="container">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/attractions">景點優惠</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/deals">熱點推介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hotels">澳洲酒店精選</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/insurance">旅遊保險</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/services">機場接送及包車</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="header-body">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/"><img src="/images/cyc-logo-50px.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products/australia">澳洲 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products/newzeland">新西蘭</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products/us">美洲</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products/china">中國</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products/euro">歐洲</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products/cruise">郵輪</a>
+                        </li>
+                    </ul>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe" aria-hidden="true"></i>中</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">中</a>
+                            <a class="dropdown-item" href="#">EN</a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-success mr-2" data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in" aria-hidden="true"></i> 登錄</button>
+                    <button type="button" class="btn btn-outline-success mr-2" data-toggle="modal" data-target="#cartModal">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> 購物車
+                        <!--<span class="badge badge-light en txt-green">2</span>-->
+                    </button>
+                    <button type="button" class="btn btn-success" data-container="body" data-toggle="popover" data-placement="top" data-content="<img src='/images/CYC-Wechat-QR-Code.png' />">
+                        <i class="fa fa-wechat" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section class="search-section">
+        <div class="container">
+            {{#if navBar}}
+            <div class="search-section-nav">
+
+                <!--<ul class="nav">-->
+                <!--<li class="nav-item">-->
+                <!--<a class="nav-link" href="tel:+61292122266">見聞國際旅行社 <i class="fa fa-phone"></i><span class="lang-en">+61 2 9212 2266</span></a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">澳洲 - 搜索</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">城市:</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">所有</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">悉尼</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">墨尔本</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">黄金海岸</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">布里斯班</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">阿德莱德</a>
+                            </li>
+                        </ul>
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">天數:</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">所有</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">一天遊</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">多天遊</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sorting-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">天數 <i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">價錢 <i class="fa fa-sort" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            {{/if}}
+        </div>
+    </section>
+
+    <!--<section class="sorting-section">-->
+        <!--<div class="container">-->
+            <!--<div class="sorting-nav">-->
+                <!--<ul class="nav nav-pills">-->
+                    <!--<li class="nav-item">-->
+                        <!--<a class="nav-link active" href="#">天數 <i class="fa fa-arrow-down" aria-hidden="true"></i></a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-item">-->
+                        <!--<a class="nav-link" href="#">價錢 <i class="fa fa-sort" aria-hidden="true"></i></a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
+</header>
