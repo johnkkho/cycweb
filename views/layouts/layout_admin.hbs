@@ -1,24 +1,65 @@
 <!doctype html>
-<html lang="en">
-<head>
+<!--[if lte IE 9]>     <html lang="en" class="no-focus lt-ie10 lt-ie10-msg"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="no-focus"> <!--<![endif]-->
+<head lang="en">
+    <!-- Title and Meta -->
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ title }}</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta property="og:title" content="CYC Ecommerce Management">
+    <meta property="og:site_name" content="CYC Ecommerce Management">
+    <meta property="og:description" content="CYC Ecommerce Management">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <title>{{ title }}</title>
+    <!-- END Title and Meta -->
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Page JS Plugins CSS go here -->
     <link rel="stylesheet" href="/stylesheets/admin/style.css">
+    <!-- Codebase framework -->
+    <link rel="stylesheet" id="css-main" href="/codebase/assets/css/codebase.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+    <!-- END Stylesheets -->
 </head>
 <body>
-{{>header_admin }}
+    {{#if isLogin}}
+        {{{ body }}}
+    {{else}}
+        <div id="page-container" class="sidebar-o sidebar-inverse side-scroll page-header-fixed page-header-modern main-content">
+            {{>nav_admin }}
+            {{>header_admin }}
+                {{{ body }}}
+            {{>footer_admin }}
+        </div>
+    {{/if}}
+    <!-- Codebase Core JS -->
+    <script src="/codebase/assets/js/core/jquery.min.js"></script>
+    <script src="/codebase/assets/js/core/popper.min.js"></script>
+    <script src="/codebase/assets/js/core/bootstrap.min.js"></script>
+    <script src="/codebase/assets/js/core/jquery.slimscroll.min.js"></script>
+    <script src="/codebase/assets/js/core/jquery.scrollLock.min.js"></script>
+    <script src="/codebase/assets/js/core/jquery.appear.min.js"></script>
+    <script src="/codebase/assets/js/core/jquery.countTo.min.js"></script>
+    <script src="/codebase/assets/js/core/js.cookie.min.js"></script>
+    <script src="/codebase/assets/js/codebase.js"></script>
 
-{{{ body }}}
+    <!-- Page JS Plugins-->
+    <script src="/codebase/assets/js/plugins/chartjs/Chart.bundle.min.js"></script>
+    <!-- Page JS Code -->
+    <script src="/codebase/assets/js/pages/be_pages_dashboard.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<script src="/javascripts/admin/main.js"></script>
+    <script src="/javascripts/admin/main.js"></script>
 </body>
 </html>
