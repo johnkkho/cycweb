@@ -15,4 +15,19 @@ $(function () {
     });
 
     $().dropdown('toggle');
+
+    /* Checkout Button */
+    $('.checkout-btn').click(function(){
+        $('.cart-modal-table').toggleClass('d-none');
+        var showCart = $('.cart-modal-table').hasClass('d-none');
+        if (showCart) {
+            $('.checkout-accordion').toggleClass('d-none');
+            $(this).html('<i class="fa fa-shopping-cart" aria-hidden="true"></i> 購物車');
+            $('#cartModal .modal-title').html('<i class="fa fa-shopping-bag" aria-hidden="true"></i> 結帳');
+        } else {
+            $('.checkout-accordion').toggleClass('d-none');
+            $(this).html('<i class="fa fa-shopping-bag" aria-hidden="true"></i> 結帳');
+            $('#cartModal .modal-title').html('<i class="fa fa-shopping-cart" aria-hidden="true"></i> 購物車');
+        }
+    })
 });

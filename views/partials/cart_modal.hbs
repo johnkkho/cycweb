@@ -10,7 +10,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <table class="ui green unstackable table">
+                <table class="ui green unstackable table cart-modal-table">
                     <thead>
                     <tr>
                         <th>產品</th>
@@ -198,43 +198,166 @@
                     </tbody>
                 </table>
 
-                <!-- Customer details -->
-                <div class="customer-details">
+                <!-- Checkout Accordion -->
+                <div id="accordion" role="tablist" class="checkout-accordion d-none">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h6 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    1. 結帳選項
+                                </a>
+                            </h6>
+                        </div>
 
-                    <div class="card border-light mb-3" style="">
-                        <div class="card-header font-weight-bold">顧客信息</div>
-                        <div class="card-body">
-                            <!-- <h4 class="card-title">Light card title</h4> -->
-                            <p class="card-text">
-                            <form>
-                                <div class="row">
-                                    <div class="col">
-                                        <input type="text" class="form-control" placeholder="名字">
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" class="form-control" placeholder="姓">
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" class="form-control" placeholder="電子郵件">
-                                    </div>
-                                    <div class="col">
-                                        <input type="text" class="form-control" placeholder="聯繫電話">
-                                    </div>
-                                    <div class="col">
-                                        <button type="button" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button>
-                                    </div>
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body row">
+                                <p class="card-text">
+                                <div class="col-sm-6">
+                                    <h5 class="mb-4 font-weight-bold">新客戶</h5>
+                                    <p>選項</p>
+                                    <form class="mb-3">
+                                        <div class="form-check form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                                註冊賬戶
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                直接結帳
+                                            </label>
+                                        </div>
+                                    </form>
+                                    <p class="small">通過創建一個帳戶，您將能夠更快地購物，獲得訂單狀態的最新信息，並跟踪您之前所做的訂單。</p>
                                 </div>
-                            </form>
-                            </p>
+                                <div class="col-sm-6">
+                                    <h5 class="mb-4 font-weight-bold">己注冊賬戶</h5>
+                                    <p>帳戶登錄</p>
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="inputUsername">用戶名</label>
+                                            <input type="email" class="form-control" id="inputUsername" placeholder="username@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword">密碼</label>
+                                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                        </div>
+                                    </form>
+                                    <a href="/users/profile" class="btn btn-success">登錄</a>
+                                </div>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <h6 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    2. 顧客信息
+                                </a>
+                            </h6>
+                        </div>
+
+                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="card-text">
+                                <form>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="inputUsername">名字</label>
+                                            <input type="text" class="form-control" placeholder="名字">
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputUsername">姓</label>
+                                            <input type="text" class="form-control" placeholder="姓">
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputUsername">電子郵件</label>
+                                            <input type="text" class="form-control" placeholder="電子郵件">
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputPassword">密碼</label>
+                                            <input type="password" class="form-control" id="inputPassword" placeholder="密碼">
+                                        </div>
+                                        <div class="col">
+                                            <label for="inputUsername">聯繫電話</label>
+                                            <input type="text" class="form-control" placeholder="聯繫電話">
+                                        </div>
+                                        <!--<div class="col">-->
+                                            <!--&lt;!&ndash;<button type="button" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button>&ndash;&gt;-->
+                                        <!--</div>-->
+                                    </div>
+                                </form>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                            <h6 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    3. 付款方法
+                                </a>
+                            </h6>
+                        </div>
+
+                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="card-text">
+                                <form>
+                                    <button type="button" class="btn btn-outline-success"><i class="fa fa-paypal" aria-hidden="true"></i> 付款</button>
+                                    <button type="button" class="btn btn-outline-success"><i class="fa fa-wechat" aria-hidden="true"></i> 付款</button>
+                                </form>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+
+                <!-- Customer details -->
+                <!--<div class="customer-details">-->
+                    <!--<div class="card border-light mb-3" style="">-->
+                        <!--<div class="card-header font-weight-bold">顧客信息</div>-->
+                        <!--<div class="card-body">-->
+                            <!--&lt;!&ndash; <h4 class="card-title">Light card title</h4> &ndash;&gt;-->
+                            <!--<p class="card-text">-->
+                            <!--<form>-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col">-->
+                                        <!--<label for="inputUsername">名字</label>-->
+                                        <!--<input type="text" class="form-control" placeholder="名字">-->
+                                    <!--</div>-->
+                                    <!--<div class="col">-->
+                                        <!--<label for="inputUsername">姓</label>-->
+                                        <!--<input type="text" class="form-control" placeholder="姓">-->
+                                    <!--</div>-->
+                                    <!--<div class="col">-->
+                                        <!--<label for="inputUsername">電子郵件</label>-->
+                                        <!--<input type="text" class="form-control" placeholder="電子郵件">-->
+                                    <!--</div>-->
+                                    <!--<div class="col">-->
+                                        <!--<label for="inputUsername">聯繫電話</label>-->
+                                        <!--<input type="text" class="form-control" placeholder="聯繫電話">-->
+                                    <!--</div>-->
+                                    <!--<div class="col">-->
+                                        <!--&lt;!&ndash;<button type="button" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button>&ndash;&gt;-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</form>-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+
             </div>
             <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button> -->
-                <button type="button" class="btn btn-outline-success"><i class="fa fa-paypal" aria-hidden="true"></i> 付款</button>
-                <button type="button" class="btn btn-outline-success"><i class="fa fa-wechat" aria-hidden="true"></i> 付款</button>
+                <button type="button" class="btn btn-outline-success checkout-btn"><i class="fa fa-shopping-bag" aria-hidden="true"></i> 結帳</button>
             </div>
         </div>
     </div>
